@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCharacterInfo } from './../../actions';
+import { clickCharacter } from './../../actions';
 import './index.css';
 
 class Navbar extends Component {
@@ -10,7 +10,7 @@ class Navbar extends Component {
                 {
                     this.props.characters
                         .map(({name, url}, key) =>
-                            <a onClick={ () => getCharacterInfo(url) } key={ key }>{ name }</a>
+                            <a onClick={ () => clickCharacter(url) } key={ key }>{ name }</a>
                         )
                 }
             </div>
