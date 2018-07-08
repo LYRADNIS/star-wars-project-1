@@ -7,7 +7,7 @@ class PageLoader extends Component {
         return (
             <div>
                 {
-                    this.props.pageLoader ? <div className="loader" /> : this.props.children
+                    this.props.pageLoader ? <div className="loader"></div> : this.props.children
                 }
             </div>
         );

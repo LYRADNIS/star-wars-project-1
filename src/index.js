@@ -15,6 +15,7 @@ import Home from './features/Home';
 // components
 import Navbar from './components/Navbar';
 import PageLoader from './components/PageLoader';
+import Footer from './components/Footer';
 
 render(
     <Provider store={ store }>
@@ -26,6 +27,7 @@ render(
                         <Route exact path="/" component={ Home }></Route>
                     </PageLoader>
                 </Switch>
+                <Footer></Footer>
             </main>
         </BrowserRouter>
     </Provider>,
