@@ -4,7 +4,7 @@ import { formatDate } from './../../formatting';
 export default ({films}) =>
     <div>
 
-        <div className="beige standard-row-height row center-xs middle-xs">
+        <div className="standard-row-height row center-xs middle-xs">
             <div className="col-xs">MOVIE</div>
             <div className="col-xs">DIRECTOR</div>
             <div className="col-xs">PRODUCER(S)</div>
