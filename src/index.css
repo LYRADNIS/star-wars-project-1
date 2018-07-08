@@ -25,3 +25,11 @@ body {
     margin-left: 0;
     margin-right: 0;
 }
+
+.large-row-height {
+    height: 500px;
+}
+
+.beige-color {
+    color: beige;
+}

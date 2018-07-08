@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import FilmGrid from './../../components/FilmGrid';
+import EmptyFilms from './../../components/EmptyFilms';
 
 class Home extends Component {
     render() {
@@ -9,15 +10,7 @@ class Home extends Component {
             <div>
 
                 {
-                    this.props.films.length > 0
-
-                    ?
-
-                    <FilmGrid films={ this.props.films }></FilmGrid>
-
-                    :
-
-                    <div>NO DATA</div>
+                    this.props.films.length > 0 ? <FilmGrid films={ this.props.films } /> : <EmptyFilms />
                 }
 
             </div>
