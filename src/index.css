@@ -1,7 +1,17 @@
+html {
+    height: 100%;
+}
+
 body {
+    color: gold;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background: url(assets/background.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .standard-row-height {
@@ -10,4 +20,9 @@ body {
 
 .border-bottom-black {
     border-bottom: 1px solid black;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
