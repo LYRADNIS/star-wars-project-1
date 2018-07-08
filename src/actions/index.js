@@ -1,6 +1,13 @@
 import store from './../store';
 import axios from './../http';
 
+export const togglePageLoader = boolean => {
+    store.dispatch({
+        type: 'PAGE_LOADER/TOGGLE',
+        payload: boolean
+    });
+};
+
 export const clickCharacter = url => {
     return getCharacterInfo(url)
         .then(grabFilms)

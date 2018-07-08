@@ -14,6 +14,7 @@ import Home from './features/Home';
 
 // components
 import Navbar from './components/Navbar';
+import PageLoader from './components/PageLoader';
 
 render(
     <Provider store={ store }>
@@ -21,7 +22,9 @@ render(
             <main>
                 <Navbar></Navbar>
                 <Switch>
-                    <Route exact path="/" component={ Home }></Route>
+                    <PageLoader>
+                        <Route exact path="/" component={ Home }></Route>
+                    </PageLoader>
                 </Switch>
             </main>
         </BrowserRouter>

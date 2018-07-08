@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import { clickCharacter } from './../../actions';
+import { clickCharacter, togglePageLoader } from './../../actions';
 
 class Navbar extends Component {
     assignButtonClass(name) {
@@ -25,13 +25,19 @@ class Navbar extends Component {
         return buttonClass;
     }
 
+    handleClick(url) {
+        togglePageLoader(true);
+        clickCharacter(url)
+            .finally(() => togglePageLoader(false));
+    }
+
     render() {
         return (
             <div className="standard-row-height border-bottom-black row center-xs middle-xs">
                 {
                     this.props.characters
                         .map(({name, url}, key) =>
-                            <div className="col-xs" onClick={ () => clickCharacter(url) } key={ key }>
+                            <div className="col-xs" onClick={ () => this.handleClick(url) } key={ key }>
                                 <button className={ classnames('btn', this.assignButtonClass(name)) }>{ name }</button>
                             </div>
                         )
