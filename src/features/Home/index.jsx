@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { formatDate } from './../../formatting';
+
+import FilmGrid from './../../components/FilmGrid';
 
 class Home extends Component {
     render() {
         return (
             <div>
+
                 {
-                    this.props.films
-                        .map(({title, release_date}, key) =>
-                            <div key={ key }>{ title } { formatDate(release_date) }</div>
-                        )
+                    this.props.films.length > 0
+
+                    ?
+
+                    <FilmGrid films={ this.props.films }></FilmGrid>
+
+                    :
+
+                    <div>NO DATA</div>
                 }
+
             </div>
         );
     }
