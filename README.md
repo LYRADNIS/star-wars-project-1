@@ -1,6 +1,6 @@
 # Star Wars Project
 
-## Link to deployment:
+## Deployment Link
 https://star-wars-project.herokuapp.com/
 
 ## Scripts
