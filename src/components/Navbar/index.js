@@ -37,8 +37,8 @@ class Navbar extends Component {
                 {
                     this.props.characters
                         .map(({name, url}, key) =>
-                            <div className="col-xs" onClick={ () => this.handleClick(url) } key={ key }>
-                                <button className={ classnames('btn', this.assignButtonClass(name)) }>{ name }</button>
+                            <div className="col-xs" key={ key }>
+                                <button onClick={ () => this.handleClick(url) } className={ classnames('btn', this.assignButtonClass(name)) }>{ name }</button>
                             </div>
                         )
                 }
